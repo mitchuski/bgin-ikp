@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IKP Call · 28 August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #F9FAF9;
+    --surface: #FFFFFF;
+    --ink: #1C2733;
+    --muted: #5C6873;
+    --faint: #8A949C;
+    --line: #DFE4E3;
+    --accent: #0E6B60;
+    --accent-soft: #E3EFED;
+    --focus-flag: #A96410;
+    --focus-soft: #F7EEDF;
+    --focus-line: #E4CFA8;
+    --mono-chip: #EEF2F1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0F151A;
+      --surface: #161E24;
+      --ink: #E4E9EA;
+      --muted: #9AA6AD;
+      --faint: #6E7A82;
+      --line: #2A343B;
+      --accent: #45B8A6;
+      --accent-soft: #14332F;
+      --focus-flag: #E0A055;
+      --focus-soft: #2B2115;
+      --focus-line: #4A3A22;
+      --mono-chip: #1D2830;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  /* ── header ── */
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem;
+  }
+  h1 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 0.35rem;
+    text-wrap: balance;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+  }
+  .call-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .chip {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: var(--mono-chip);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .chip.utc {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .header-note {
+    font-size: 0.85rem;
+    color: var(--faint);
+    margin: 0 0 2.5rem;
+  }
+
+  /* ── agenda items ── */
+  .item {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 0 1rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .item:last-of-type { border-bottom: 1px solid var(--line); }
+  .num {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--faint);
+    line-height: 1.3;
+    font-variant-numeric: tabular-nums;
+  }
+  .item h2 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .item p { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.95rem; }
+  .item p:last-child { margin-bottom: 0; }
+  .item ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .item li { margin-bottom: 0.4rem; }
+  .item li:last-child { margin-bottom: 0; }
+  .item strong { color: var(--ink); font-weight: 600; }
+  .timebox {
+    float: right;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    color: var(--faint);
+    margin-left: 0.75rem;
+    padding-top: 0.25rem;
+    white-space: nowrap;
+  }
+
+  /* ── focus block (item 2) ── */
+  .item.focus {
+    background: var(--focus-soft);
+    border: 1px solid var(--focus-line);
+    border-radius: 6px;
+    padding: 1.4rem 1.25rem;
+    margin: 0.75rem -1.25rem;
+  }
+  .item.focus + .item { border-top: 1px solid var(--line); }
+  .focus-tag {
+    display: inline-block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--focus-flag);
+    border: 1px solid var(--focus-flag);
+    border-radius: 3px;
+    padding: 0.15rem 0.45rem;
+    margin-bottom: 0.5rem;
+  }
+  .item.focus .num { color: var(--focus-flag); }
+  .lock-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .lock-list li {
+    display: grid;
+    grid-template-columns: 1.2rem 1fr;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  .lock-list .tick {
+    color: var(--focus-flag);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 500;
+  }
+  .sub-label {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 1.1rem 0 0.35rem;
+  }
+  .item.focus .sub-label { color: var(--focus-flag); }
+
+  /* ── sub-item / doc card ── */
+  .subitem {
+    margin-top: 0.85rem;
+    padding: 0.75rem 0.9rem;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .subitem .subnum {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 500;
+    color: var(--accent);
+    margin-right: 0.4rem;
+  }
+  .doc-card {
+    margin-top: 0.85rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .doc-card .doc-title {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.04em;
+  }
+  .doc-card p { margin: 0 0 0.5rem; }
+  .doc-card p:last-child { margin-bottom: 0; }
+  .doc-card ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+
+  /* ── links ── */
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover, a:focus-visible { border-bottom-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  .mono-link { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.85em; }
+
+  /* ── milestone rail ── */
+  .rail-title {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 2.5rem 0 1rem;
+  }
+  .rail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+  }
+  .milestone {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0.7rem 0.8rem;
+  }
+  .milestone .date {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .milestone .what { font-size: 0.82rem; color: var(--muted); line-height: 1.35; }
+  @media (max-width: 620px) {
+    .rail { grid-template-columns: 1fr 1fr; }
+    .item.focus { margin: 0.75rem 0; }
+  }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--faint);
+  }
+  footer p { margin: 0.25rem 0; }
+
+  @media print {
+    body { background: #fff; color: #111; }
+    .page { padding: 0.5rem 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="eyebrow">BGIN · Identity, Key Management &amp; Privacy Working Group</p>
+    <h1>IKP Working Group Call</h1>
+    <p class="subtitle">Agenda · Thursday 28 August 2026 · hybrid, all welcome</p>
+    <div class="call-meta">
+      <span class="chip utc">12:00 UTC</span>
+      <span class="chip">08:00 New York</span>
+      <span class="chip">13:00 London</span>
+      <span class="chip">14:00 Geneva</span>
+      <span class="chip">21:00 Tokyo</span>
+    </div>
+    <p class="header-note">Primary objective for this call: lock the PQC session (item 2) — GDC26 in Geneva is next week.</p>
+  </header>
+
+  <section class="item">
+    <div class="num">1</div>
+    <div>
+      <span class="timebox">~10 min</span>
+      <h2>Block 15 — confirm IKP sessions</h2>
+      <p><strong>Block 15: 15–16 October 2026, Georgetown University, Washington D.C.</strong> (hybrid). Themes are set; session titles and owners are what we confirm today.</p>
+      <ul>
+        <li>Confirm the IKP slate across the project hubs: <strong>PQC migration</strong>, <strong>Accountable Wallet</strong>, <strong>Forensics analysis</strong> (public-comment doc open — reviews welcome before Block 15), and <strong>Privacy-enhanced authentication</strong>.</li>
+        <li>Reminder: a written contribution + presentation waives the registration fee; submissions close roughly one week before the Block (≈ 8 October).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="item focus">
+    <div class="num">2</div>
+    <div>
+      <span class="timebox">~25 min</span>
+      <div class="focus-tag">Focus of this call</div>
+      <h2>PQC — session planning, research &amp; updates</h2>
+      <p>GDC26 runs <strong>1–3 September in Geneva</strong>, next week. The IKP-led breakout is <strong>“PQC Migration on DLTs: Crypto Agility, ZKP, and Resource Estimates”</strong> (BGIN with ISO as co-organizer candidate; ECDSA.fail community invited). This is the last WG call before it.</p>
+
+      <p class="sub-label">To lock on this call</p>
+      <ul class="lock-list">
+        <li><span class="tick">→</span><span>Session run-sheet: speakers, moderator, and running order for the Geneva breakout.</span></li>
+        <li><span class="tick">→</span><span>Format decision: live demo of the resource-estimate / migration material, or conceptual discussion.</span></li>
+        <li><span class="tick">→</span><span>Who is in the room in Geneva vs. remote, and whether we schedule a dry run before 2 September.</span></li>
+      </ul>
+
+      <p class="sub-label">Research &amp; updates</p>
+      <ul>
+        <li><strong>Resource estimates:</strong> update from the community effort quantifying what breaking ECDSA actually costs (qubit/gate frontier movement and what it implies for migration timelines).</li>
+        <li><strong>Crypto agility:</strong> NIST PQC signature transition on DLTs — where agility layers sit, and what harvest-now / decrypt-later means for chain data specifically.</li>
+        <li><strong>ZKP substrate:</strong> note on the ecosystem shift toward hash-friendly / PQ-plausible proof systems and its bearing on the PQC-migration hub's scope.</li>
+      </ul>
+
+      <p class="sub-label">Output</p>
+      <p>The Geneva session readout feeds directly into the Block 15 <strong>pqc-migration</strong> hub and its October session — agree who carries that write-up.</p>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="num">3</div>
+    <div>
+      <span class="timebox">~10 min</span>
+      <h2>Privacy &amp; personhood — taxonomy updates</h2>
+      <p>Three efforts are converging on proof of personhood from different layers: the <strong>World Foundation's <em>Proof of Human Conceptual Standards Framework</em></strong> (v0.13, ten assurance categories), the <strong>ToIP DTG workstreams</strong> (Credentials WD01 + ZKP requirements v0.3), and the <strong>IKP proof-of-personhood paper</strong> heading to Block 15.</p>
+
+      <div class="doc-card">
+        <span class="doc-title">Tabled · “Proof of Human: Overlap and Convergence Analysis” (working note, Aug 2026)</span>
+        <p>Prepared for this WG and World Foundation; circulated alongside this agenda. It maps all ten WF assurance categories against the published DTG material and argues the WF framework lands strongest as a <strong>cross-ecosystem assurance-semantics layer</strong> — populating assurance-class / policy / accreditation fields the proof layer already discloses, with the NIST xAL / ISO 29115 mapping nobody else will write — rather than a standalone fourth vocabulary.</p>
+        <ul>
+          <li><strong>Gaps nobody owns = candidate IKP work items:</strong> coercion / duress / credential rental, an adversary-and-horizon column per assurance category, who accredits a VTN, the AML–sanctions vs. unlinkable-uniqueness collision, and the global-registry harms case.</li>
+          <li><strong>Sequencing:</strong> convergence gets introduced at the BGIN-co-organised DTG session at GDC26 (day 2, 16:00–16:50); the assurance decomposition then rides into the proof-of-personhood paper as a contributed section before Block 15.</li>
+        </ul>
+        <p>Ask: WG review + critical feedback on the note, and agreement on the paper-integration path.</p>
+      </div>
+
+      <div class="subitem">
+        <span class="subnum">3.1</span>World Foundation × IKP WG event — <strong>Monday 8 September</strong>, straight after Geneva. World Foundation presents the taxonomy to the IKP community; the convergence note is tabled alongside. Confirm agenda, participants, and how outcomes route into the paper and Block 15.
+      </div>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="num">4</div>
+    <div>
+      <span class="timebox">~12 min</span>
+      <h2>ZKP in DTG — first proof proposal, open for comments</h2>
+      <p>The Digital Trust Graph ZKP work now has two concrete artifacts on the table — a running proof proposal and a new requirements record — and we are looking for comments from IKP members.</p>
+      <ul>
+        <li>Proposed proof: <strong>uniqueness / nullifier with set membership and transcript binding</strong> — a scoped reuse-detection predicate (not "one unique human"), benchmarked as a working circuit with published numbers.</li>
+        <li>Evidence and reproduction live in a public repo with a verification registry — independent runs have already reproduced the build byte-identically across architectures: <a class="mono-link" href="https://github.com/mitchuski/dtgwg-zkp-mage">github.com/mitchuski/dtgwg-zkp-mage</a>.</li>
+      </ul>
+
+      <div class="doc-card">
+        <span class="doc-title">To evaluate · ADR-001 “Community-Anchored Proof” (Proposed, 25 Aug 2026)</span>
+        <p><a class="mono-link" href="https://docs.fpp.storm.ws/dtg-community-anchored-proof-adr.html">docs.fpp.storm.ws/dtg-community-anchored-proof-adr.html</a> — proposes the first ZK use case against DTG credentials: prove in one presentation that (1) the holder has a valid relationship credential, (2) the holder has valid membership in community C, and (3) <em>the relationship's issuer</em> also holds valid membership in C — without revealing relationship, counterparty, or persistent identifiers. Requirements-only and deliberately format-agnostic: 26 testable clauses across privacy, soundness, currency, registry, deployment, conformance, and governance.</p>
+        <p><strong>Initial evaluation, for discussion:</strong></p>
+        <ul>
+          <li><strong>Strongly convergent</strong> with the proof proposal above — clause 3 is the "verifiable edge" question already under discussion in the credentials-spec threads, and the membership leg, challenge/transcript binding (S5), and published-test-vector + cross-implementation pattern (X1/X2) already exist as runnable evidence, with circuit benchmarks that can seed the D1/D2 device and verifier budgets the ADR leaves open.</li>
+          <li><strong>The hard seam is the registry</strong> (T1–T4, C1–C4): membership and revocation state exposed in proof-compatible form, with currency checks that do not identify the holder — precisely the registry–ZK interaction the ZKP work holds as deferred charter scope. This is where cross-WG coordination is actually needed.</li>
+          <li><strong>One clarification to raise:</strong> P4 full unlinkability vs. reuse detection — if communities want Sybil resistance the construction needs scoped nullifiers, which are governed, declared linkability rather than a leak; the ADR should say which contexts require them.</li>
+        </ul>
+        <p>Ask: members review the clauses before or shortly after the call, and we agree where comments land (the ADR's own channel vs. the ZKP task-force threads).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="item">
+    <div class="num">5</div>
+    <div>
+      <span class="timebox">~5 min</span>
+      <h2>Any other business</h2>
+      <p>Open floor.</p>
+    </div>
+  </section>
+
+  <p class="rail-title">The road ahead</p>
+  <div class="rail">
+    <div class="milestone">
+      <span class="date">1–3 Sep</span>
+      <span class="what">GDC26, Geneva — PQC migration breakout (item 2)</span>
+    </div>
+    <div class="milestone">
+      <span class="date">8 Sep</span>
+      <span class="what">World Foundation × IKP WG event (item 3.1)</span>
+    </div>
+    <div class="milestone">
+      <span class="date">≈ 8 Oct</span>
+      <span class="what">Block 15 written-contribution submissions close</span>
+    </div>
+    <div class="milestone">
+      <span class="date">15–16 Oct</span>
+      <span class="what">Block 15, Georgetown University, Washington D.C.</span>
+    </div>
+  </div>
+
+  <footer>
+    <p>Background thread: <a class="mono-link" href="https://bgin.discourse.group/t/gdc-2026-thread/1011">bgin.discourse.group/t/gdc-2026-thread/1011</a> · working-group discussion at <a class="mono-link" href="https://bgin.discourse.group">bgin.discourse.group</a></p>
+    <p>Timings are suggested for chairing, not fixed. Agenda prepared 27 August 2026.</p>
+  </footer>
+</div>
+</body>
+</html>

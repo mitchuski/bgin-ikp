@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IKP Call Reader — 10 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  :root {
+    --paper:#EDF0EE; --card:#F8FAF9; --ink:#101917; --muted:#5B6764;
+    --rule:#D2DAD7; --rule-soft:#E1E7E4;
+    --open:#0E6E5E; --held:#8A3F52; --held-soft:#F0E1E4;
+    --flag:#A66A0D; --flag-soft:#F2E8D6;
+    --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --body:"Newsreader",Georgia,"Times New Roman",serif;
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#0D1413; --card:#151D1B; --ink:#E3EAE7; --muted:#94A29E;
+      --rule:#2A3735; --rule-soft:#1E2A28;
+      --open:#4FBCA4; --held:#DE8AA0; --held-soft:#332026;
+      --flag:#DFA850; --flag-soft:#322916;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#0D1413; --card:#151D1B; --ink:#E3EAE7; --muted:#94A29E;
+    --rule:#2A3735; --rule-soft:#1E2A28;
+    --open:#4FBCA4; --held:#DE8AA0; --held-soft:#332026;
+    --flag:#DFA850; --flag-soft:#322916;
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body {
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--body); font-size:17px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img { max-width:100%; }
+  .sheet { max-width:1020px; margin:0 auto; padding-inline:20px; padding-block:40px 64px; }
+
+  .band { display:grid; grid-template-columns:1fr; gap:10px 28px; padding-block:30px; border-top:1px solid var(--rule); }
+  .rail { font-family:var(--mono); font-size:11px; line-height:1.5; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+  .rail b { display:block; font-weight:500; color:var(--ink); }
+  .rail .num { font-size:26px; line-height:1; color:var(--open); display:block; margin-bottom:6px; letter-spacing:0; }
+  @media (min-width:860px) { .band { grid-template-columns:160px 1fr; } .rail { padding-top:5px; } }
+
+  h1,h2,h3 { font-family:var(--display); text-wrap:balance; margin:0; }
+  .masthead { padding-block:8px 26px; }
+  .eyebrow { font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--open); margin:0 0 14px; }
+  h1 { font-size:clamp(30px,6vw,46px); font-weight:700; line-height:1.04; letter-spacing:-.022em; max-width:17ch; }
+  .standfirst { margin:16px 0 0; font-size:19px; line-height:1.5; color:var(--muted); max-width:56ch; }
+  .standfirst em { color:var(--ink); font-style:italic; }
+  h2 { font-size:21px; font-weight:600; letter-spacing:-.012em; margin-bottom:14px; }
+  h3 { font-size:15px; font-weight:600; }
+  p { margin:0 0 12px; max-width:62ch; }
+  p:last-child { margin-bottom:0; }
+  .note { font-size:15px; color:var(--muted); }
+  code,.m { font-family:var(--mono); font-size:.83em; }
+  a { color:var(--open); text-underline-offset:2px; }
+  a:focus-visible { outline:2px solid var(--open); outline-offset:3px; }
+
+  /* agenda strip */
+  .agenda { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--rule-soft); border:1px solid var(--rule-soft); margin-top:8px; }
+  .agenda a { background:var(--card); padding:13px 14px 15px; text-decoration:none; color:var(--ink); display:block; }
+  .agenda a:hover { color:var(--open); }
+  .agenda .n { font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; color:var(--muted); display:block; margin-bottom:4px; }
+  .agenda .t { font-family:var(--display); font-weight:600; font-size:15px; line-height:1.2; display:block; }
+
+  /* finding grid */
+  .findings { display:grid; grid-template-columns:repeat(auto-fit,minmax(205px,1fr)); gap:1px; background:var(--rule-soft); border:1px solid var(--rule-soft); }
+  .finding { background:var(--card); padding:15px 15px 17px; }
+  .finding h3 { margin-bottom:5px; }
+  .finding p { font-size:14.5px; line-height:1.45; color:var(--muted); margin:0; }
+  .finding p b { color:var(--ink); font-weight:500; }
+
+  /* two lanes */
+  .lanes { display:grid; grid-template-columns:1fr; gap:14px; }
+  @media (min-width:720px) { .lanes { grid-template-columns:1fr 1fr; } }
+  .lane { background:var(--card); border-top:3px solid var(--open); padding:15px; }
+  .lane.held { border-top-color:var(--held); }
+  .lane .repo { font-family:var(--mono); font-size:12.5px; word-break:break-word; display:block; margin-bottom:2px; }
+  .lane .who { font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--open); display:block; margin-bottom:11px; }
+  .lane.held .who { color:var(--held); }
+  .tree { list-style:none; margin:0; padding:0; display:grid; gap:6px; }
+  .tree li { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:baseline; border-bottom:1px solid var(--rule-soft); padding-bottom:5px; }
+  .tree li:last-child { border-bottom:none; }
+  .tree .path { font-family:var(--mono); font-size:12.5px; }
+  .tree .what { color:var(--muted); font-size:13.5px; text-align:right; }
+
+  .tests { display:grid; grid-template-columns:repeat(auto-fit,minmax(172px,1fr)); gap:9px; margin:14px 0 0; }
+  .test { border-left:2px solid var(--held); background:var(--held-soft); padding:9px 11px; }
+  .test .code { font-family:var(--mono); font-size:10.5px; letter-spacing:.07em; color:var(--held); display:block; margin-bottom:3px; }
+  .test span:last-child { font-size:14.5px; line-height:1.35; display:block; }
+
+  /* ecosystem cards */
+  .eco { display:grid; grid-template-columns:1fr; gap:14px; }
+  @media (min-width:700px) { .eco { grid-template-columns:1fr 1fr; } }
+  .item { background:var(--card); padding:15px 15px 16px; border-left:2px solid var(--rule); }
+  .item.pq { border-left-color:var(--open); }
+  .item .src { font-family:var(--mono); font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:5px; }
+  .item h3 { font-size:16px; margin-bottom:6px; }
+  .item p { font-size:15px; line-height:1.45; margin:0 0 9px; }
+  .item .nums { font-family:var(--mono); font-size:12px; color:var(--muted); line-height:1.7; display:block; margin-bottom:9px; }
+  .item .touch { font-family:var(--mono); font-size:11.5px; color:var(--open); display:block; border-top:1px dotted var(--rule); padding-top:8px; }
+  .item.plain .touch { color:var(--muted); }
+
+  .status { display:grid; gap:8px; list-style:none; margin:0; padding:0; }
+  .status li { display:grid; grid-template-columns:8px 1fr; gap:12px; align-items:start; font-size:15.5px; }
+  .status .dot { width:8px; height:8px; border-radius:50%; background:var(--open); margin-top:8px; }
+  .status .dot.blocked { background:var(--flag); }
+  .flagline { background:var(--flag-soft); border-left:2px solid var(--flag); padding:11px 14px; font-size:15.5px; margin-top:15px; }
+  .flagline b { font-weight:600; }
+
+  .doors { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .chip { font-family:var(--mono); font-size:12px; border:1px solid var(--rule); background:var(--card); padding:7px 11px; text-decoration:none; color:var(--ink); }
+  .chip:hover { border-color:var(--open); color:var(--open); }
+
+  footer { margin-top:28px; padding-top:18px; border-top:1px solid var(--rule); font-size:13.5px; color:var(--muted); }
+  @media print {
+    body { background:#fff; color:#000; font-size:11pt; }
+    .band { break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <p class="eyebrow">BGIN · IKP Working Group · Call of 10 September 2026</p>
+    <h1>Agenda, and what sits behind each line</h1>
+    <p class="standfirst">Geneva is written up, the competition repository is live, and three ecosystem releases in nine days all bear on the same question: <em>what makes a stack genuinely PQC-ready?</em></p>
+    <nav class="agenda">
+      <a href="#gdc"><span class="n">01</span><span class="t">GDC outcomes</span></a>
+      <a href="#pqc"><span class="n">02</span><span class="t">PQC competition</span></a>
+      <a href="#personhood"><span class="n">03</span><span class="t">Personhood taxonomy</span></a>
+      <a href="#eco"><span class="n">04</span><span class="t">Ecosystem updates</span></a>
+    </nav>
+  </header>
+
+  <section class="band" id="gdc">
+    <div class="rail"><span class="num">01</span><b>Geneva</b>2–3 Sep · Palexpo<br>Chatham House Rule</div>
+    <div>
+      <h2>GDC outcomes</h2>
+      <p>Three BGIN sessions ran: <b>vulnerability handling in the agentic AI era</b>, <b>wallet security assurance (ST/PP)</b>, and <b>PQC migration on DLTs</b>. Records are published; speakers are not identified. All three tracks continue at Block 15.</p>
+      <h3 style="margin:18px 0 10px; color:var(--muted); font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-family:var(--mono); font-weight:500">What the PQC room settled</h3>
+      <div class="findings">
+        <div class="finding"><h3>Hybrid, then cutover</h3><p>Agility is the deliverable — <b>not</b> a one-time curve-to-ML-DSA rewrite.</p></div>
+        <div class="finding"><h3>Three attack classes</h3><p>In-flight · at-rest against on-chain keys · exploit manufacture, separated from deployment.</p></div>
+        <div class="finding"><h3>The wrong monitor</h3><p>Not qubit counts, not a Q-day. Watch <b>error correction, interconnects, compilers</b>.</p></div>
+        <div class="finding"><h3>Four hard problems</h3><p>Staging node rules · verifying legacy signatures · dormant funds · superficial “PQC-ready”.</p></div>
+        <div class="finding"><h3>Two axes, two chains</h3><p>Theoretical security and implementation efficiency. Bitcoin and Ethereum.</p></div>
+        <div class="finding"><h3>The dates disagree</h3><p>Winners <b>mid-Sep 2028</b> (July briefing) or <b>March 2029</b> (GDC26 report). Both carried.</p></div>
+      </div>
+      <div class="doors">
+        <a class="chip" href="https://bgin-global.org/news/260904-gdc26-wrap">GDC26 wrap →</a>
+        <a class="chip" href="https://bgin-global.org/news/260903-gdc26-pqc-migration">PQC session report →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="pqc">
+    <div class="rail"><span class="num">02</span><b>The record</b>bgin-global</div>
+    <div>
+      <h2>PQC competition — the repository is live</h2>
+      <p>Every finding above now has a file. Cutover sits in <span class="m">SCHEMES.md</span> C-01 and <span class="m">METRICS.md</span> M-14; legacy verification in M-21; the attack classes are open question 6, to be tagged at W2; the December “PQC-ready chain” definition is <span class="m">ROADMAP.md</span> W4. A meeting report ages — a metric row under version control gets argued with.</p>
+      <div class="lanes">
+        <div class="lane">
+          <span class="repo">pqc-agility-competition</span>
+          <span class="who">Public · anyone</span>
+          <ul class="tree">
+            <li><span class="path">evaluation/</span><span class="what">metrics · rubric · COI</span></li>
+            <li><span class="path">testbed/</span><span class="what">harness · schemes · schema</span></li>
+            <li><span class="path">workshops/</span><span class="what">W1–W4 roadmap</span></li>
+            <li><span class="path">decisions/ · resources/</span><span class="what">rulings · provenance</span></li>
+            <li><span class="path">docs/ · scripts/</span><span class="what">signing · security model</span></li>
+          </ul>
+        </div>
+        <div class="lane held">
+          <span class="repo">pqc-agility-competition-private</span>
+          <span class="who">Conveners + seated committee</span>
+          <ul class="tree">
+            <li><span class="path">committee/</span><span class="what">nominations · COI · minutes</span></li>
+            <li><span class="path">evaluation/submissions/</span><span class="what">applicant material</span></li>
+            <li><span class="path">call-text/</span><span class="what">held to the host's date</span></li>
+            <li><span class="path">sources/</span><span class="what">uncleared documents</span></li>
+            <li><span class="path">CLASSIFICATION · CLEARANCE</span><span class="what">who held what, why</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" style="margin-top:14px"><b>Default is publication.</b> Governance, metrics, rubric, scope rulings and harness are public <em>while still wrong</em> — draft v0, red-penned in the open. Material is held only if one of four tests is true.</p>
+      <div class="tests">
+        <div class="test"><span class="code">C-THIRDPARTY</span><span>Not ours to publish</span></div>
+        <div class="test"><span class="code">C-COMMITTEE</span><span>Names a person deliberatively</span></div>
+        <div class="test"><span class="code">C-EMBARGO</span><span>Would pre-empt an announcement</span></div>
+        <div class="test"><span class="code">C-SUBMISSION</span><span>Arrived under terms</span></div>
+      </div>
+      <p class="note" style="margin-top:12px">Every hold has a named holder and a written reason · every embargo has a trigger · unfinished is not confidential · awkward is not confidential.</p>
+
+      <h3 style="margin:22px 0 10px; color:var(--muted); font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-family:var(--mono); font-weight:500">Evaluation committee — forming</h3>
+      <ul class="status">
+        <li><span class="dot"></span><span>Two tracks, the NIST-style split named in the GDC26 report: <b>theoretical security</b> and <b>implementation efficiency</b>.</span></li>
+        <li><span class="dot"></span><span>Nominations open by issue template; COI disclosure filed to the private lane, the recusal published.</span></li>
+        <li><span class="dot blocked"></span><span>Four pull requests open, none merged — the rule requires a code-owner approval that is not the author's.</span></li>
+      </ul>
+      <p class="flagline"><b>Ask on this call:</b> a second convener with a signing key, and names for the two evaluation tracks. Until the first, the record cannot move — by design.</p>
+      <div class="doors">
+        <a class="chip" href="https://github.com/bgin-global/pqc-agility-competition">The repository →</a>
+        <a class="chip" href="https://bgin.discourse.group/t/ikp-post-quantum-cryptography-thread-06-26/1001">IKP PQC thread →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="personhood">
+    <div class="rail"><span class="num">03</span><b>Proposed</b>Open meeting<br>≈ 24 Sep</div>
+    <div>
+      <h2>Privacy and proof-of-personhood taxonomy</h2>
+      <p><b>Proposal: an open, topic-focused meeting in two weeks.</b> One subject, no standing agenda, anyone may attend.</p>
+      <p class="note">The working note already on the table separates the layers. What the taxonomy has to keep apart:</p>
+      <div class="findings" style="margin-top:12px">
+        <div class="finding"><h3>Humanity ≠ uniqueness</h3><p>Two different claims, routinely collapsed into one credential.</p></div>
+        <div class="finding"><h3>Linkability scope</h3><p>Adopt the architecture, then parameterise the dimension.</p></div>
+        <div class="finding"><h3>Strength expression</h3><p>The headline gap — how assurance is stated, not just asserted.</p></div>
+        <div class="finding"><h3>Continuity</h3><p>The carrier and its controls, not the primitive.</p></div>
+        <div class="finding"><h3>Agent authority</h3><p>The field list exists; it needs completing.</p></div>
+        <div class="finding"><h3>Gaps nobody owns</h3><p>Coercion and credential rental · threat model per category · governance of the domain.</p></div>
+      </div>
+      <p class="note" style="margin-top:14px">Verifiability is not truth. A taxonomy that cannot say which of these a scheme delivers cannot be used to certify one.</p>
+    </div>
+  </section>
+
+  <section class="band" id="eco">
+    <div class="rail"><span class="num">04</span><b>Ecosystem</b>Nine days</div>
+    <div>
+      <h2>Updates from the ecosystems</h2>
+      <div class="eco">
+
+        <div class="item pq">
+          <span class="src">a16z crypto · 9 Sep 2026</span>
+          <h3>Lattice Jolt</h3>
+          <p>The zkVM goes post-quantum: <b>Akita</b>, a Module-SIS lattice commitment, replaces the curve-based Dory — the same assumption family as ML-DSA and ML-KEM.</p>
+          <span class="nums">128-bit target · &gt;2M RISC-V cycles/s on a laptop<br>&gt;10M/s on Metal GPU · proofs &lt;100 KB · 200 B/cycle</span>
+          <span class="touch">→ C-05 ZK-wrapped verification · M-16</span>
+        </div>
+
+        <div class="item pq">
+          <span class="src">Project Eleven</span>
+          <h3>Key recovery from state reuse</h3>
+          <p>Stateful hash-based signatures carry an operational failure mode, not just a cryptographic one: sign twice from one state and the key is exposed.</p>
+          <span class="nums">Bears on XMSS / XMSS^MT and LMS / HSS<br>NIST SP 800-208 · RFC 8391 · RFC 8554</span>
+          <span class="touch">→ S-04 / S-05 state caveat · the Poseidon2-XMSS ruling</span>
+        </div>
+
+        <div class="item">
+          <span class="src">World · Atheon · Reilabs · Nethermind</span>
+          <h3>ProveKit</h3>
+          <p>Client-side zero-knowledge that actually runs on the phone people own — Noir circuits, proofs generated on-device, verified on chain or in a browser.</p>
+          <span class="nums">iPhone SE 3: 2–3 s · 2 GB Android: &lt;30 s<br>&lt;500 MB peak memory · payload &lt;3 MB</span>
+          <span class="touch">→ personhood taxonomy · wallet-side verification</span>
+        </div>
+
+        <div class="item plain">
+          <span class="src">Launching</span>
+          <h3>agentprivacy labs</h3>
+          <p>An AI cybersecurity research lab at <span class="m">agentprivacy.org</span> — research programme, deployment and advisory, and an agents board.</p>
+          <span class="nums">Adjacent lane, declared for the record<br>Conflicts disclosed under the COI policy</span>
+          <span class="touch">→ disclosed, not a BGIN work item</span>
+        </div>
+
+      </div>
+      <div class="doors">
+        <a class="chip" href="https://a16zcrypto.com/posts/article/lattice-snarks-jolt-post-quantum-faster/">Lattice Jolt →</a>
+        <a class="chip" href="https://www.projecteleven.com/blog/key-recovery-from-state-reuse">Project Eleven →</a>
+        <a class="chip" href="https://provekit.org/">ProveKit →</a>
+        <a class="chip" href="https://agentprivacy.org">agentprivacy.org →</a>
+      </div>
+      <p class="note" style="margin-top:16px">Three of these four are the same argument in different rooms: post-quantum proving is now fast enough and small enough that <em>“PQC-ready”</em> has to mean something testable. That is the December deliverable.</p>
+    </div>
+  </section>
+
+  <footer>
+    Reader prepared for the IKP working group call, 10 September 2026. Sources: GDC26 wrap and PQC session report (BGIN, 3–4 Sep 2026) · METI/NEDO community briefing (July 2026) · <span class="m">bgin-global/pqc-agility-competition</span>.
+  </footer>
+
+</div>
+</body>
+</html>

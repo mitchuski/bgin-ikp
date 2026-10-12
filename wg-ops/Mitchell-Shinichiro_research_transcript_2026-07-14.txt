@@ -1,0 +1,251 @@
+Mitchell-Shin'ichiro (BGIN, Research)
+Tue, Jul 14, 2026
+
+0:17 - Shinichiro Matsuo
+Uh oh.
+
+0:18 - Mitchell Travers
+Uh uh How are we going? Good, good.
+
+2:01 - Shinichiro Matsuo
+Okay, so we have one more so let's start with your research. Okay.
+
+2:10 - Unidentified Speaker
+Yeah.
+
+2:12 - Mitchell Travers
+It's become quite a body of work, I'm sure, as you may have seen and observed. But I can.
+
+2:22 - Mitchell Travers
+maybe talk through some of it, but I guess where did you want me to start with my research question in terms of like where I'm at with different communities and different concepts and different things that have been included in the research or the plan for what I think it should be and become? Like, I guess, which would be more helpful to start with?
+
+2:56 - Shinichiro Matsuo
+Okay, can you explain that the research question and what is the research challenge? Because, you know, if you aim to have some achievement from an academic point of view, so many academic committee of the academic. Conferences, academic agendas, ask you that what is your academic contribution?
+
+3:24 - Mitchell Travers
+Yeah, um, so the question is, and the hypothesis is treating privacy or privacy in a strict definition of it being the like moment of disclosure as like a unit of value that. Be measured in a particular model, which is a multiplicative gated equation, which has values being privacy strength and credential verifiability and these sorts of things. So, the question is largely trying to build a new, I guess, privacy as an economic model for.
+
+4:15 - Mitchell Travers
+Hopefully, ambitiously decentralized AI to use, but I think any sort of autonomous computer and hopefully potentially human system could use this as like a way to measure information transfer. And part of the challenges of trying to sort of socialize or go through this research is it touches a lot of fields and it's trying to find part of the method that I've been using is like using agent auto research and consuming, say, for example, the cryptography work that we've been doing, or the zero-knowledge proof work that we've been doing, and all of these adjacent fields, and then trying to put that into this privacy as value model as an auto-research methodology for proving the inference and proving the information. And proving might be a strong word, but building trust. Between the agents that are participating in this research cycle. So yeah, I'll I'll pause there for a second, 'cause it's like quite a lot. Can I ask one basic question?
+
+5:43 - Shinichiro Matsuo
+Why do you want to express some status regarding privacy into that numerical number? What is the purpose?
+
+5:55 - Mitchell Travers
+So the purpose is so it stops being it becomes an architectural choice rather than a compliance add-on. Because if people see it as a or if it can be measured, when privacy is either disclosed or protected and in terms of the of that information as value. I think it will be a shift in the same way that when things like manufacturing was made into a unit of value or agriculture was made into a unit of value.
+
+6:49 - Mitchell Travers
+shifted the incentives in the favor of that principle. So I'm hoping privacy by having this more measurable model in this agendaic era will become like a first class citizen in like information science and computer science and these sorts of things that will emerge.
+
+7:15 - Shinichiro Matsuo
+Okay, I would ask the same question from a different angle. If, for example, if we, you know, hopefully if we can express some characteristics of the system from a privacy point of view, 50 or 60, system A is 50 and system B is a 60. So, you know, that any user of the potential user of the systems can compare that the outcomes of the using that system A or system B from privacy point of view. In this regard, the purpose of the re-express the status regarding privacy is giving a user and the options to to compare the two to different systems from privacy point of view.
+
+8:09 - Shinichiro Matsuo
+so if if it is true that so the purpose of that this research is to make measurement for comparison between two or multiple systems?
+
+8:21 - Mitchell Travers
+That is part of the I would say that's the purpose, but the measurement is both a overlap and polarity measurement where how much do these two systems are they the same or find common ground? But it's also a like a privacy visibility ratio from the other angle where can we prove that these two information systems are not exactly the same? So in terms of protecting say for example, if I had one pod of information and it was all of my personally identifiable, my like Iris scan, these sorts of things, there needs to be separation to prove that that system can't be like defaked or made identical. So there's this duality between finding the overlap and making sure the adversary can never reconstruct the system fully.
+
+9:31 - Shinichiro Matsuo
+Okay, I understand that. So, second, the next question is: I believe that there are many existing research to try to express that some status of regarding privacy with the numerical numbers or some some numbers or something like that. So have you done that some you know the the literature review on the previous or past tons of tri such kind of trials you know many people would like to achieve that kind of goal. But uh so I have s the next question, but uh so before that so I if it is one it's a it's a it's a perfect to uh too easy to understand. But uh the the definition of the privacy is different among among the person. So it's not easy to express that some you know. Something regarding the privacy with only one number. So it could be that multiple dimensional data or something like that. But anyway, that's so what is a so have you have you done that literature review of the past tons of that kind of research? And what are the new things for your research?
+
+10:54 - Mitchell Travers
+Yeah, so I have done a literature review in the like, cryptography side, in the information theory side, in the sort of difference between um sort of privacy models like multi-party computation and um the sort of differential privacy. I have also surfaced that, but I haven't done a formal literature review of this. I think that would be a good place to start in terms of the lead-on follow-up question that you had, I agree and I've come to the conclusion also that it has to be like a lattice within a manifold of information that is changing. And that means that it can't be one number because it's the relationship between two points that make the number, which is why the equation is also, or the model is also multiplicative gating. Because if none of these points on the lattice, if any of them are zero, then the value or the number is you cannot come to it correctly. So it's kind of like a failure mode for the model. And that relates to the like quantum. Side of things where you're actually like putting this information into geometry in other words and then that geometry changes its shape based on the relationship that the person has with the privacy of their environment or it's kind of their relationship with the observer but that's yeah getting into another side of the question where is this kind of like a observer theory thing or is this yeah that's that's how I would answer that question. And uh yeah, thank you.
+
+13:02 - Shinichiro Matsuo
+And uh the last button, this is the main question. Because that so as far as I observed that discussion on privacy among the blockchain community, including Leona, something like that. So they said privacy. You know, I don't know that the definition of privacy, but in ISO standard or other existing discussion by the privacy community, privacy academic community, the privacy is basically discussed as a privacy impact to one specific human. You know, because that's a for privacy, so what the specific human cares different amongst persons. So we, as a result, we measure something regarding privacy as a privacy impact to the specific human.
+
+14:05 - Shinichiro Matsuo
+There is already tons of the ISO standards or the related document about discussing. Discussion about the privacy impact, how we deal with the privacy impact, not privacy privacy impact to the explicit human. So I guess it's it's better style of thinking about that. So if if that you are doing the same thing for the me or for my wife or for other p person, but privacy impact is different among among people. But so, if we measure that the things that privacy impact, that is a better way to discuss. Of course, that so we might have another style of the discussion. But so if you will do that more literature review, that please read that several documents regarding the privacy impact assessment.
+
+15:04 - Mitchell Travers
+Yeah, I'll go through that. Part of one thing that I'd like to, I guess, show you it will be hard to show in zone because I wasn't really prepared, but I've done a I've created like a Agentic harness that uses part of the model for this measuring of privacy to do these sorts of lit reviews. So now that I have that privacy impact and ISO direction, I can do like an agent runtime. And what's interesting about that is it also is practicing and creating the information to help try improve the model. Because it's a dual agent architecture. There's two running at the same time. One is a prover and one is a sort of delegation. And they don't share like information and that's strict in the agent harness. So that was one of the strategies that I've employed for this. Research that I think I would like to maybe also write down as a like it could even be a methodology paper in of itself where I use the model and the harness and the agent auto research runtime across the sorts of overlaps that I find with people who review the work so now I'll have the privacy impact runtime and then be able to sort of feed that back into a wiki system.
+
+17:05 - Mitchell Travers
+So I can keep you in the loop about that.
+
+17:09 - Shinichiro Matsuo
+And I have one suggestion. Give me a second. So if you would like to discuss the privacy issues. With connecting the economic impact or economic incentives.
+
+17:32 - Shinichiro Matsuo
+Okay. So you should look at this series of workshops. I will type in that link to the chat screen. This is.
+
+17:50 - Shinichiro Matsuo
+vice or something like that. But it's a workshop of the economic workshop on economics of information security. So this work series of workshop has almost over 20 years history. And it's collected very high level, very, very good papers to discuss that economic.
+
+18:16 - Unidentified Speaker
+aspect of the information security and privacy.
+
+18:19 - Shinichiro Matsuo
+So you can find several interesting paper to discuss about it.
+
+18:25 - Mitchell Travers
+Okay. Yeah, this looks good.
+
+18:28 - Shinichiro Matsuo
+And so if your main academic contribution is about the economics, so you should aim to present your paper at this workshop. That's great. Thank you. That's what I was looking for.
+
+18:45 - Mitchell Travers
+There was a few others that I've sort of tried to prepare the positioning for that I can get a list to you on and you can let me know if they are suitable for the way that you see the work as well. But yeah, I'll look into this. Is there a timeline?
+
+19:11 - Shinichiro Matsuo
+this workshop is held in May or June, July time frame.
+
+19:19 - Mitchell Travers
+Okay.
+
+19:20 - Shinichiro Matsuo
+And you know so this year submission deadline was February 1st.
+
+19:28 - Unidentified Speaker
+Okay.
+
+19:28 - Mitchell Travers
+Yeah. And we have we have plenty of time to to prepare.
+
+19:33 - Shinichiro Matsuo
+Yeah.
+
+19:34 - Mitchell Travers
+I can structure for this one. And there are, yeah, I guess what I was trying to share earlier is I have lots of rehydrations of the base arguments and theorems and axioms that I've made structured into the model and the privacy is value like root document. And part of the benefit of running these sort of research loops is the result is a specific framing towards that. That academic community. And then I go in and edit and write and change the wording just to ensure coherence with my gestalt of the idea: privacy is value. So we can kind of do that as an activity or as a workshop.
+
+20:25 - Unidentified Speaker
+Okay. And so it's another discussion about that.
+
+20:30 - Shinichiro Matsuo
+Our, you know, if you would like to. You know jointly working on this research so do you think that you have you might have that some grant from easy foundation as a foundation to do it to do that research I would like yeah so you know as as a university professor so we need to ask some money to the collaborator. But if Israel Foundation was a foundation which is interested in this kind of research, he have a grant to you. So it's a good starting point for us to collaborate with you.
+
+21:16 - Mitchell Travers
+Yeah. I like to do that.
+
+21:19 - Shinichiro Matsuo
+And do you mean us as for example you are you are applying to some ISRIM Foundation research grant.
+
+21:29 - Shinichiro Matsuo
+I don't know how much they will provide. For example, that if they will provide 30K or 40K or 50K, that enough. So if they provide 50K or 40K, so you will take half of them. And so your company will be you know sponsor of our our research center you know you will pay 20k for our research center that you will take 20k for your your salary for your research okay I understand so and it would be connected to like uh georgetown or virginia tech is yes yes okay and uh so with using that you know you if if you know your company uh will be a you know member research center So you can understand. You can reach out to all professors to discuss it.
+
+22:29 - Mitchell Travers
+Yeah, look, that would be, I think, a great progression. And it would give a it would give trust that the resources will be spent in the right way. That I currently struggle with when approaching people from just the purely Solbus and agent privacy.
+
+22:50 - Mitchell Travers
+sort of Solgus being the research company that I run and agent privacy being the expression and then Begin being the open source standards community sort of being attached to a university would help a lot with the funding side of things. I think there are other communities that have contributed to the research that may also want to be a part of the grant, but we would have to discuss that.
+
+23:27 - Shinichiro Matsuo
+Our research center, the name of the research center is Cyber Smart. Ask 50K per year for one company, but for small startups, we ask 25K.
+
+23:42 - Mitchell Travers
+Okay.
+
+23:44 - Shinichiro Matsuo
+And to help you that so if we successfully you know have a grant from Israeli Foundation as a foundation, that's enough.
+
+23:54 - Mitchell Travers
+Okay, yeah, so we what is win?
+
+24:00 - Mitchell Travers
+I think this I think this direction is good. I think it has to be we win the grant and then enter the relationship. As like a promise that we'll keep.
+
+24:15 - Shinichiro Matsuo
+Yeah, but but so with this this offshore engagement with your company and the cyber smart, so you can reach out to any any university professor at Georgetown, Virginia Tech, University of Notre Dame, and access to that students, you know. Of course, that twenty twenty five K is not enough number to hire students entirely, but you can hire, you know, ten percent or twenty percent of student time.
+
+24:43 - Mitchell Travers
+So if you need a student to to work with you, yeah, well, I think that's the advantage of it being an AI first and um academic rooted project is that uh The students, we don't necessarily need a lot of their time to get really powerful results because I assume some of the sponsorship money will go into AI tokens and we would then allocate them to the students who want to do a research runtime which uses the harness, which then uses the model, which then the result of that research loop that happens. Gives us a little bit more data on the privacy's value model actually being a thing that supports these agents in communicating with each other and measuring each other's information space and being able to do these things that we discussed earlier.
+
+25:48 - Unidentified Speaker
+Great.
+
+25:49 - Shinichiro Matsuo
+And we have some agreement. But so I I will help you to find out that potential grant opportunities, not only by ESRIM Foundation, but so let's try to find out that as many options as possible.
+
+26:07 - Mitchell Travers
+Yeah, that'd be really helpful. And I think it would also feed naturally into the beginning stuff in sort of making that relationship stronger. Because Solvis will have more funding, I'll be able to dedicate that public goods time in begin in perpetuity in like a more definitive way. So, yeah, I would love to do that. I currently, the side of the Ethereum community that are interested most in this is the like Polarity or GTAN style edge of the community. I think in terms of the auto research innovation, and I would I'll share with you the repo for the harness, and like for you to give it a go with some of the stuff that you're working on as well and see if it works. I think that's going to be interested to the like post-quantum cryptography side of Ethereum as an improvement on some of the ways that they do their runtime in those estimate research cycles, but also in the I last, I think if this is still happening within Ethereum Foundation, Privacy Pools V2 launched and I participated in the ceremony and it was, I think it was like 100,030 constraints. The agent harness with the open privacy pools repo on the R1 CS circuit, and I brought the constraints down from 36 or 38,000 to 17,000 or around about that number. So the harness also is. I haven't verified this, which is why I need more researchers to use it and then actually look at the results from their perspective, not a perspective of someone who's been in it the entire time and my model is could be lying to me in order to get my approval kind of thing. But yeah, being able to reduce that many constraints on a circuit based on the way that the agents interact with each other, I think is quite powerful. So that and that's another one of the like academic expressions that I'm trying to get out of yeah it's it's part of the difficulty I think I found which what you've suggested now is a solution to is this as much like a research program as it is a sort of paper or a piece of research to share? So I kind of need to do both. And I've been doing the research program, but it's hard to find people to jump into a research program without published, more isolated, specific papers that have conferences that analyze them. Yeah, looking forward to it. Okay, great.
+
+29:32 - Shinichiro Matsuo
+And for the, you know, you you said about the PQC, but so, you know, you Japanese government finally started that initiative, you know. So they decided so Nomura Research Institute, NRI, so is uh operator of that three years three years competition. So and uh we need to start that conversation with Israeli Financial Bitcoin community because that NRI will pay money for BM. I think I guess it should be uh about 300K for three years. But so most three years, 300K, that's that's right.
+
+30:17 - Unidentified Speaker
+300K.
+
+30:18 - Shinichiro Matsuo
+But uh most of them is provided to universities to create a test of it. But uh you know, about about sixty K or seventy seventy K dollar is provided b to VN uh operation. That is win for us. But anyway, so we need to start that involvement Israeli Foundation Bitcoin Core scientist. And we need to start with the resume the conversation with Eastern Foundation PQC guys, especially for setting up that one special session at their Cambridge workshop. You know, so I will send you that my thoughts on the my uh my thoughts on the roadmap of this year and next year. But uh can you is uh I think that the most of the test bed work is operated under the IKP working group for the this competition. And uh can you can you and me jointly you know so welcome that, so having a discussion with Ethereum Foundation? Yeah. Mainly with Justin Drake, or I don't know, but we need, you know, the Cambridge workshop is two and a half, two pound two months or two half half months away. It's not it's not far. So we need to start that. So please set up that one hour or two hour session to discuss about it. 24 days toward the retreat. And so I think that you already have the email address of them or we are on their telegram chat. And so I would appreciate it if you could start initiate a conversation with them on that. That okay yeah and potentially so we can invite you know we can invite easily foundation to gdc on that yeah that's what I was thinking we should do is the invitation pattern for that is we'll send a follow-up email and once we've confirmed the session which will be on pqc but but you know originally that you know all organizer of gdc is expected to that Israeli Foundation is one of the co-organizers. I'm not sure that it's too it's not too late or it's too late. But so if Israel Foundation is interested in the co-organizer as well, so we can we can discuss with about with you know Daniel about it.
+
+33:06 - Mitchell Travers
+Are they already named or not?
+
+33:08 - Shinichiro Matsuo
+No I don't think I don't think not but uh it's rate, it's not too rate.
+
+33:15 - Unidentified Speaker
+Yeah.
+
+33:16 - Mitchell Travers
+Okay.
+
+33:17 - Shinichiro Matsuo
+I'm not sure that Ethereum Foundation is interested in only, but even if that Ethereum Foundation not the co-owners of the GDC, so we can embed them. Yeah.
+
+33:28 - Mitchell Travers
+There are two. I think there are two. There's the ZKP side of the Ethereum Foundation that was at last GDC, and then there's the PQC side. And I don't think that the PQC side knows that the happening at GDC. I think also that's one thing I wanted to clarify with you. Does GDC know what the PQC discussion is? And is it like something that they would be able to socialize because it's quite new and different to at I I think one one or two months ago at the GDC co-organizers by V Recall, so I gave a presentation about my three present my three proposals.
+
+34:18 - Shinichiro Matsuo
+Then I so that's everything I provided to GDC community. But so we need to more detailed context and support you know expected discussion at GDC.
+
+34:34 - Mitchell Travers
+Yep. Yeah, because I think it's a unique discussion that people will want to be there out of interest, not out of being like they wouldn't attend GDC to have the PQC discussion unless they were invited by us is kind of what I'm saying. So we need to make sure that the people invited have tickets and will be able to attend and then speak with Daniel in the way that it's socialized as this interesting but fundamentally important thing that's going to change all of the other conversations over time. Yep. Okay.
+
+35:17 - Mitchell Travers
+All right.
+
+35:18 - Shinichiro Matsuo
+And the last thing to discuss is about the World Foundation. And we need to secure that there is the interest and their sponsorship money for the block number 15 that so before that so let's design that the future roadmap for example block number fifty we will the you know final draft you know blue whole person food paper then we will finalize that uh that the final final document the final beginning standard document at begin block number sixty in Japan. Then so we will bring that document to ISO, you know, SC twenty seven or JTC TCO7, something like that. Any anyway, so without that kind of roadmap, I don't know, actual roadmap, to bring our discussion to standardization body or government, so they might lose their interest to begin.
+
+36:21 - Shinichiro Matsuo
+And during this July and August time frame, so we can set up one or two sessions at our IKP working group call to discuss, to invite World Foundation people to discuss about it.
+
+36:42 - Mitchell Travers
+Yep. One other thing that is coming to mind is I have accepted or owned a co-chair of the zero-knowledge proof working group at Linux Foundation for the trust graph community, which is really quite awesome. And I'm already starting to contribute, and it's great. But the co-chair is in these from Realize, which is another biometric authentication zero knowledge proof community vendor, right? So there is this balance that I'll need to strike, which is also an interesting sort of information. Again, privacy is value, the choices I make on sorry, on disclosing information on either side of that is what creates the understanding and the value between those two groups. But yeah, world at the IKP working group, building a proof of personhood paper, and in the Link Foundation Zero Knowledge Proof Working Group, there's a collaboration there that I can be.
+
+38:03 - Shinichiro Matsuo
+That's very interesting. Yeah. Yeah.
+
+38:06 - Mitchell Travers
+I think, and because at LF, they're more, they want the zero-knowledge proofs of the biometrics to not be like a vendor coming to just give their standard. It could also add that balance that we need to strike where it's not just a world standard passing through begin to ISO. So perhaps that's also some sort of incentive that we can. Make the world aware of and bring a collaboration between those two working groups in terms of sharing participants as well. If that makes sense. And it makes sense.
+
+38:51 - Shinichiro Matsuo
+And obviously, it's related to your research. Because your research.
+
+38:58 - Mitchell Travers
+Yeah, because what I'm trying to do is compress these zero knowledge proofs in a way that agents. Can use it as machine readable language, which is then human readable language, which is then legal.
+
+39:11 - Shinichiro Matsuo
+Yeah. You they're they they're they're very eager to apply the pro ho pro personhood protocol to the AI agent e-commerce, obviously. And uh, wildcoin is used for the agent agent e-commerce protocol. I don't think that WorldCoin has a huge privacy impact to that, but so they need to use proof on person to to avoid that so misuse of AI to the AI AID commerce. And uh they use WorldCoin for their commerce and uh they need to prove that so their framework doesn't give the huge privacy impact to the general people. So that is what they need to prove to government. And so your research should be the part of that.
+
+40:02 - Mitchell Travers
+Yeah, I believe so. Because it creates a separation. Between what the person is holding and what they're proving or proposing to be proven. Okay. Okay.
+
+40:19 - Shinichiro Matsuo
+That's everything from my side.
+
+40:23 - Mitchell Travers
+All right. I think in terms of yeah, so I just think there are two. So there's the grant pathway that I would like support with. And then there's also a different pathway where I have AI like tokens or compute or hardware. Because one thing that and I don't know if this is a thing yet in the academic community, but I think it could be. And there's a experiment which potentially is to be decided. Maybe doing with a university in Amsterdam, but this is more on the legal tech side of things, where we use a local model that's trained on my compression and rehydration privacy agent harness thing for them to write like a constitution for their law class. Which then is this pendulum that goes from sci-fi and casting forward to a white paper and a serious document or a essay and proverbs or human and machine readable language in the middle. So having those hardware machines be sponsored to then almost be a part of the it's it's on the edge of I think universities either will take this really well or they'll be worried about it but yeah having this like obelisk style local machine artifact for the course that people interact with and that model slowly builds this trust graph privacy is value, knowledge network for all of the students to then sort of take ownership of the things that they contributed to, but then be proof that each other contributed based on the overlaps of the runtimes of the agents that they do inside this local machine. I think that's a really powerful idea and an experiment that I'm going to try and iterate on that I just also wanted to let you know about because I think those results will. Also potentially lead into having these machines be sponsored rather than it be the research or the grant as the way. Yeah. Okay.
+
+43:02 - Shinichiro Matsuo
+And so I see. For that email from GDC secretariat a couple you know um one hour ago. So we need to you know revise that our spreadsheet by the end of this month. But uh so let's work on it after today's call. And the the minimum thing minimum thing so we need to do is uh securing multiple, you know, two or more organizers for each session. That's it. It. Then but it's doable. Then and the other things that so we the act the action item is uh you know uh for me joe is uh sending the email to World Foundation, the Ethereum Foundation.
+
+43:52 - Unidentified Speaker
+So that's two emails. Yeah, yes.
+
+43:54 - Mitchell Travers
+One is to the world chain, one is to the PGC chain. No, no, no. So so it's yes, yes.
+
+44:00 - Shinichiro Matsuo
+So PQC discussion for Eastern Foundation and the world of also is the world for the World Foundation. Anyway, set up the I will send you that so my thoughts on that the roadmap for the World Foundation, but after that, so please send that email to World Foundation guys to set up a call and uh set up that IV IKP Working Group this uh d dedicated session. During August. Okay.
+
+44:28 - Unidentified Speaker
+Yep.
+
+44:28 - Mitchell Travers
+That makes sense. Great. Thank you very much. All right.
+
+44:31 - Shinichiro Matsuo
+I'll see you.

@@ -1,0 +1,87 @@
+{
+  "1-3": {
+    "_title": "FASE: AI & Blockchain",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Exploring synergies and risks where AI and blockchain intersect — data, governance, and real-world use cases.",
+    "agenda": [
+      "Where AI and blockchain meet in practice: data provenance, AI agents that hold assets and transact, and on-chain records of automated decisions",
+      "Governance risks: accountability, liability and oversight when an AI system rather than a person initiates a transaction",
+      "Use cases from practitioners in the room, and which of them are already in production",
+      "What feeds forward: use-case framing and governance risk notes for the FASE track, and handoffs to the Agentic AI and Security AI Agent work",
+      "Next steps and owners for the meeting report"
+    ]
+  },
+  "2-3": {
+    "_title": "FASE: Industrial Design of Digital Assets",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Working session on industrial design and shared industry-structure models for digital-asset ecosystems.",
+    "agenda": [
+      "Industrial design of digital assets: the roles of issuers, intermediaries and infrastructure providers, and where they are combined or separated",
+      "Shared industry-structure models across crypto-assets, stablecoins and tokenized deposits",
+      "Review of the harmonization discussion paper: comments from the room",
+      "Timeline and owners for the next version of the deliverable"
+    ]
+  },
+  "2-5": {
+    "_title": "FASE: Decentralized Compute & Market Structure",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Discussion on decentralized compute infrastructure and digital-asset industry market structure.",
+    "agenda": [
+      "Decentralized compute: who supplies, who pays, and who is accountable in decentralized compute and AI-inference markets",
+      "Market-structure implications for regulation and supervision",
+      "Technical metrics for decentralization: categories, classification methods, and how they inform maturity and classification debates across jurisdictions",
+      "Guidance for applying the metrics consistently, and next steps for the report"
+    ]
+  },
+  "2-7": {
+    "_title": "FASE: Stablecoin Policy — a Global Outlook",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Comparative discussion of stablecoin regulatory approaches and policy priorities across jurisdictions.",
+    "agenda": [
+      "Stablecoin regulation compared across jurisdictions: issuer licensing, reserve and redemption requirements, and supervision",
+      "Policy priorities and gaps: where approaches diverge and what that costs cross-border use",
+      "Implementation realities from issuers and intermediaries",
+      "Roadmap update for the Practical Stablecoin Implementation Guide"
+    ]
+  },
+  "2-9": {
+    "_title": "AML Policy, Forensics & Analytics — Common Taxonomy (FASE/IKP)",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Joint FASE and IKP session on AML policy, forensics and analytics, and a common taxonomy for harmful on-chain activities.",
+    "agenda": [
+      "The Forensics & Analysis document in public comment: review of comments received",
+      "Forensics versus analytics: settling the common framing",
+      "The illicit-activity common lexicon: terms in progress and how practitioners and policymakers use them",
+      "Guidance for VASPs, investigators and educators",
+      "Privacy and proportionality in analytics: what can be inferred, by whom, and with what safeguards",
+      "Next steps toward publication"
+    ]
+  },
+  "1-8": {
+    "_title": "Industry Session 1",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Industry-led session on policy and market themes. Partner organization to be announced.",
+    "agenda": [
+      "Industry presentation (partner to be announced)",
+      "Discussion: what industry needs from harmonized treatment of crypto-assets, stablecoins and tokenized deposits",
+      "Inputs to the FASE harmonization discussion paper and industry-structure work"
+    ]
+  },
+  "1-9": {
+    "_title": "Industry Session 2",
+    "speakers": "",
+    "moderator": "",
+    "summary": "Second industry-led session. Partner organization and format to be announced.",
+    "agenda": [
+      "Industry presentation (partner and format to be announced)",
+      "Practitioner perspectives on where standards would reduce cost or risk",
+      "Inputs to the FASE harmonization deliverables"
+    ]
+  }
+}

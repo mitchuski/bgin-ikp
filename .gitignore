@@ -1,0 +1,16 @@
+# LaTeX build artefacts (decks rebuild with latexmk)
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+build.log
+# slide previews (regenerate with pdftoppm)
+**/preview/
+# scratch
+__pycache__/
+_sweep_sessions.json

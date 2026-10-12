@@ -1,0 +1,45 @@
+{
+  "1-3": {
+    "summary": "AI and blockchain systems are beginning to depend on each other in practice rather than in theory: AI agents hold wallets, pay for services in stablecoins and act on-chain for users; blockchains record the provenance of data, models and outputs and settle the compute AI workloads consume; and AI is applied to on-chain analytics, smart-contract auditing and security monitoring. This session gives an overview of the industry as it stands today, then turns to the open questions that matter most for policymakers and practitioners. The discussion will inform the scope of FASE's AI + Blockchain workstream and identify topics for future written contributions.",
+    "speakers": "Joseph Beverley (Co-Chair, FASE)",
+    "moderator": "Joseph Beverley (Co-Chair, FASE)",
+    "agenda": [
+      "Overview of the AI and blockchain industry today: the major developments of the past year, how each technology is adapting to accommodate the other, and where the gaps remain",
+      "AI agents that hold wallets, pay for services in stablecoins, and act on-chain on behalf of users",
+      "Blockchains for the provenance of data, models and outputs, and for coordinating and settling AI compute; AI applied to on-chain analytics, smart-contract auditing and security monitoring",
+      "Open question: who is accountable when an autonomous agent transacts?",
+      "Open question: how should agent identity and authorisation be established?",
+      "Open question: how do existing AML/CFT and consumer-protection rules apply to machine-initiated activity?",
+      "Open question: where does the convergence create opportunities that current regulatory frameworks do not yet recognise?",
+      "Scope of the FASE AI + Blockchain workstream and topics for future written contributions"
+    ]
+  },
+  "2-3": {
+    "title": "FASE: Industrial Structure of Digital Assets",
+    "summary": "Japan is moving crypto-asset regulation from the Payment Services Act to the Financial Instruments and Exchange Act, and the detailed rules are now being written. The Discussion Paper \"The Industrial Structure of Digital Assets\", prepared by the Study Group on the Ideal Industrial Structure for Digital Assets and first presented at Block 14 in Tokyo, starts from a simple observation: rules designed without a shared picture of how the industry is actually structured risk not working as intended. This session maps the stakeholders and structural features of the digital-asset industry, closes with six open questions, and invites participants to propose ways to address or mitigate them.",
+    "speakers": "Joseph Beverley (Co-Chair, FASE), Ken Katayama (Senior Chief Researcher, Nomura Research Institute, Ltd.), Ken Kawai (Partner, Anderson Mōri & Tomotsune, Gaikokuho Kyodo Jigyo), Tetsuro Morishita (Professor, Faculty of Law, Sophia University)",
+    "agenda": [
+      "Mapping the stakeholders and structural features of the digital-asset industry: a thin domestic intermediary layer that depends on a technology, audit and market-making layer largely provided overseas; a competitive imbalance between registered operators and offshore or decentralised services; and an industry that is vertically integrated and largely loss-making",
+      "Competitive asymmetry: how can Japan protect users and support local operators when offshore exchanges and DeFi services can reach Japanese users without bearing the same regulatory costs?",
+      "Infrastructure and global markets: which parts of the crypto infrastructure stack should Japan develop and be competitive in, and which can it rely on global providers for?",
+      "Compete vs. share: which functions should each digital asset venture run itself, and which could be provided by third parties or shared across the industry?",
+      "Public chains and their public-good nature: how should Japan contribute to the core technology and developer ecosystems of public blockchains, rather than benefit from work maintained elsewhere?",
+      "Coexistence with DeFi: is today's approach — regulating centralised exchanges but having no clear regulatory touchpoint for decentralised exchanges — sustainable, and where should the regulatory line be drawn?",
+      "Diversifying capital markets: how could token-based fundraising become accessible to people using their own wallets while protecting investors, especially as the boundary between crypto tokens and securities blurs?",
+      "Open discussion: participants propose ways to address or mitigate the six questions"
+    ]
+  },
+  "2-5": {
+    "summary": "Between 2022 and 2026, blockchain-based networks that buy and sell compute (GPU time, inference, model training, rendering) moved from concept to revenue, with named enterprise and AI-laboratory customers, and operators of AI infrastructure increasingly describe compute itself as a commodity. This session asks whether decentralised compute networks can be considered commodity markets, and what would follow if they were, starting from the FASE study report \"Compute-as-Commodity: Observable Flows in Decentralised AI Infrastructure\". It connects to the concentration-of-computing-resources challenge raised in the Industrial Structure session earlier the same morning.",
+    "speakers": "Joseph Beverley (Co-Chair, FASE), James Angel (Professor, Georgetown University)",
+    "moderator": "Joseph Beverley (Co-Chair, FASE)",
+    "agenda": [
+      "The study report: six criteria drawn from commodity-market thinking — fungibility, price discovery, settlement and clearing, storage or its substitutes, differentiated counterparty roles, and regulatory recognition — applied to four networks: Akash, Bittensor, Render and Aethir",
+      "Does the blockchain layer do real work or is it decorative? Separating productive flows, where tokens meet real external demand, from circular flows that recycle tokens internally",
+      "The business models behind these networks, and where they meet or miss the criteria",
+      "Gaps in current regulatory and policy treatment, and opportunities for standard-setting",
+      "Review of a draft policymaker checklist: could a given network fall within commodity-market regulation or similar regimes?",
+      "Link to the concentration-of-computing-resources challenge raised in the Industrial Structure session (2-3)"
+    ]
+  }
+}
